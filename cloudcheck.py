@@ -1,7 +1,7 @@
 # Cloud Check SDK
 
 AZURE = ['windows.net', 'cloudapp.com', 'azure-api.net']
-GCP = ['appspot.com', 'firebase.com', 'ghshosted.com']
+GCP = ['appspot.com', 'firebase.com', 'ghshosted.com', 'gcr.io']
 AWS = ['amazonaws.com', 'aws.dev']
 
 def is_azure(domain)
