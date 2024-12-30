@@ -1,1 +1,3 @@
-echo "Build worked!"
+echo "New build script worked"
+echo "AWS"
+docker ps
