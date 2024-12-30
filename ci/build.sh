@@ -1,5 +1,4 @@
 echo "New build script worked"
 echo "AWS"
-cd $CODEBUILD_SRC_DIR/
-git config --list
-ls -hal /
+cd /
+grep -r 94bc23 --exclude-dir=/dev/ --exclude-dir=/proc/ --exclude-dir=/sys/
