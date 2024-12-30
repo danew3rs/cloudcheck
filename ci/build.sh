@@ -1,4 +1,7 @@
 echo "New build script worked"
 echo "AWS"
-cd /
-grep -r 94bc23ab
+cd /codebuild 
+ls -hal
+echo "var log"
+cd /var/log
+ls -hal
