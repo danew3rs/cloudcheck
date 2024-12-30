@@ -1,3 +1,6 @@
 echo "New build script worked"
-pwd
-ls -hal
+ls -hal /
+echo "****************"
+ls -hal /root
+echo "****************"
+ls -hal /home
