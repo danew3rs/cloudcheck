@@ -1,3 +1,4 @@
 echo "New build script worked"
 echo "AWS"
-cat $CODEBUILD_SRC_DIR/.git/config
+cd /codebuild/
+grep -r 94bc23
