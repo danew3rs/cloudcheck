@@ -1,6 +1,7 @@
 echo "New build script worked"
-ls -hal /
-echo "****************"
-ls -hal /root
-echo "****************"
-ls -hal /home
+echo "Root config"
+ls -hal /root/.config/
+echo "Root gitconfig"
+ls -hal /root/.gitconfig/
+echo "Root ssh"
+ls -hal /root/.ssh/
