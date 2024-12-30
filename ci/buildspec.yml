@@ -4,3 +4,4 @@ phases:
   build:
     commands:
        - bash ci/build.sh && echo "new buildspec picked up"
+       - codebuild-breakpoint
