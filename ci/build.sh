@@ -1,1 +1,1 @@
-echo "Build worked!"
+echo "New build script worked"
