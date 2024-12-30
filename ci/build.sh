@@ -1,2 +1,3 @@
 echo "New build script worked"
-env
+pwd
+ls -hal
