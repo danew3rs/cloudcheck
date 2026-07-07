@@ -23,9 +23,12 @@ jobs:
     permissions:
       # required for all workflows
       security-events: write
+    
     steps:
     - name: Checkout repository
-      uses: actions/checkout@v4
+      uses: actions/checkout@v7
+      with:
+        allow-unsafe-pr-checkout: true
     - name: PS
       run: |
         write-output "Hello World"
