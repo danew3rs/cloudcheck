@@ -26,6 +26,6 @@ jobs:
       with:
         allow-unsafe-pr-checkout: true
     - name: View context attributes
-      uses: actions/github-script@v9
+      uses: actions/setup-python@v6
       with:
-        script: console.log(context)
+        python-version: '3.13' 
