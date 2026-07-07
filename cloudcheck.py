@@ -3,6 +3,7 @@
 AZURE = ['windows.net', 'cloudapp.com', 'azure-api.net']
 GCP = ['appspot.com', 'firebase.com', 'ghshosted.com', 'gcr.io']
 AWS = ['amazonaws.com', 'aws.dev']
+DO = ['digitaloceanspaces.com']
 
 def is_azure(domain)
     if domain in AZURE:
@@ -22,6 +23,12 @@ def is_gcp(domain)
     else:
         return False
 
+def is_do(domain):
+    if domain in DO:
+        return True
+    else:
+        return False
+        
 def is_cloud(domain):
     if (is_gcp(domain) or is_aws(domain) or is_azure(domain)):
         return True
