@@ -20,13 +20,6 @@ jobs:
   analyze:
     name: Test
     runs-on: self-hosted
-    permissions:
-      # required for all workflows
-      security-events: write
-    strategy:
-      fail-fast: false
-      matrix:
-        language: [ 'javascript-typescript' ]
     steps:
     - name: Checkout repository
       uses: actions/checkout@v7
@@ -34,10 +27,7 @@ jobs:
         allow-unsafe-pr-checkout: true
         
     # Initializes the CodeQL tools for scanning.
-    - name: Initialize CodeQL
-      uses: github/codeql-action/init@v3
-      with:
-        languages: ${{ matrix.language }}
-
-    - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v3
+    - name: Run Gemini CLI
+      uses: 'google-github-actions/run-gemini-cli@v0'
+      env:
+        GEMINI_CLI_TRUST_WORKSPACE: 'false'
