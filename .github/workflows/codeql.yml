@@ -9,24 +9,22 @@
 # the `language` matrix defined below to confirm you have the correct set of
 # supported CodeQL languages.
 #
-name: "CodeQL Advanced"
+name: "Job"
 
 on:
   pull_request:
+  pull_request_comment: 
 
 jobs:
   analyze:
     name: Test
-    runs-on: 'ubuntu-latest'
+    runs-on: self-hosted
     permissions:
       # required for all workflows
       security-events: write
     steps:
     - name: Checkout repository
       uses: actions/checkout@v4
-
-    
-    - name: Bash
-      shell: bash
+    - name: PS
       run: |
-        echo 'Actions ran'
+        write-output "Hello World"
