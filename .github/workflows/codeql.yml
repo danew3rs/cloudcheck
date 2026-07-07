@@ -33,9 +33,12 @@ jobs:
       with:
         node-version: 24
         package-manager-cache: false # Disable automatic npm caching if not required
-    - run: npm ci
     - name: Display structure of downloaded files
       run: ls -R
+    - uses: actions/labeler@v6
+    - uses: actions/setup-python@v6
+      with:
+        python-version: '3.13' 
     - name: PS
       run: |
         write-output "Hello World"
