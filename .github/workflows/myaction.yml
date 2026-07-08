@@ -8,7 +8,7 @@ on:
 jobs:
   analyze:
     name: Test
-    runs-on: windows-latest
+    runs-on: self-hosted
     permissions:
       # required for all workflows
       security-events: write
