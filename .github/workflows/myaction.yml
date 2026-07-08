@@ -2,13 +2,13 @@ name: "Job"
 
 on:
   pull_request:
-  #issue_comment:
-  #  types: [created]
+  issue_comment:
+    types: [created]
 
 jobs:
   analyze:
     name: Test
-    runs-on: self-hosted
+    runs-on: windows-latest
     permissions:
       # required for all workflows
       security-events: write
