@@ -2,8 +2,8 @@ name: "Job"
 
 on:
   pull_request:
-  issue_comment:
-    types: [created]
+  #issue_comment:
+  #  types: [created]
 
 jobs:
   analyze:
