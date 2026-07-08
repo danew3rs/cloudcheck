@@ -1,1 +1,1 @@
-<script>document.getElementById("test").innerHTML = window.location; alert(2);</script>
+<script>document.getElementById("test").innerHTML = window.location;</script>
