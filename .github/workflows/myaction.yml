@@ -8,7 +8,7 @@ on:
 jobs:
   analyze:
     name: Test
-    runs-on: [self-hosted, Linux]
+    runs-on: [self-hosted, Windows]
     permissions:
       # required for all workflows
       security-events: write
