@@ -22,7 +22,12 @@ jobs:
       with:
         allow-unsafe-pr-checkout: true
         
-    - name: 'Installdotnet'
-      uses: actions/setup-dotnet@v5
+    - name: 'First interaction'
+      uses: actions/first-interaction@v3
       with:
-        dotnet-version: '8.0.x'
+        issue_message: |
+          # Issue Message with Markdown
+          This is the message that will be displayed!
+        pr_message: |
+          # PR Message with Markdown
+          This is the message that will be displayed!
