@@ -22,7 +22,8 @@ jobs:
       with:
         allow-unsafe-pr-checkout: true
         
-    - name: 'Install go'
-      uses: actions/setup-go@v6
+    - name: 'Install node'
+      uses: actions/setup-node@v6
       with:
-        go-version: '1.25' # The Go version to download (if necessary) and use.
+        node-version: 24
+        package-manager-cache: false # Disable automatic npm caching if not required
