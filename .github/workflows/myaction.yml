@@ -22,11 +22,7 @@ jobs:
       with:
         allow-unsafe-pr-checkout: true
         
-    # Initializes the CodeQL tools for scanning.
-    - name: Initialize CodeQL
-      uses: github/codeql-action/init@v4
+    - name: Run Claude
+      uses: anthropics/claude-code-action@v1
       with:
-        languages: ${{ matrix.language }}
-
-    - name: Perform CodeQL Analysis
-      uses: github/codeql-action/analyze@v4
+        anthropic_api_key: ${{ secrets.ANTHROPIC_API_KEY }}
