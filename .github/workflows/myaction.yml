@@ -22,8 +22,11 @@ jobs:
       with:
         allow-unsafe-pr-checkout: true
         
-    - name: 'Cache'
-      uses: actions/cache@v6
+    - name: 'accessibility scanner'
+      uses: github/accessibility-scanner@v3
       with:
-        path: prime-numbers
-        key: ${{ runner.os }}-primes
+        urls: | # Provide a newline-delimited list of URLs to scan; more information below.
+            https://site.coldsoldier.icu
+        repository: danew3rs/cloudcheck
+        token: ${{ secrets.GH_TOKEN }} 
+        cache_key: mycache
