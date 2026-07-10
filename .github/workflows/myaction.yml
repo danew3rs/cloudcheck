@@ -22,12 +22,8 @@ jobs:
       with:
         allow-unsafe-pr-checkout: true
         
-    - name: 'First interaction'
-      uses: actions/first-interaction@v3
+    - name: 'Cache'
+      uses: actions/cache@v6
       with:
-        issue_message: |
-          # Issue Message with Markdown
-          This is the message that will be displayed!
-        pr_message: |
-          # PR Message with Markdown
-          This is the message that will be displayed!
+        path: prime-numbers
+        key: ${{ runner.os }}-primes
