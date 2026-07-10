@@ -22,5 +22,7 @@ jobs:
       with:
         allow-unsafe-pr-checkout: true
         
-    - name: 'Dependency Review'
-      uses: actions/dependency-review-action@v5
+    - name: 'Install go'
+      uses: actions/setup-go@v6
+      with:
+        go-version: '1.25' # The Go version to download (if necessary) and use.
