@@ -1,6 +1,6 @@
 # Cloud Check SDK
 
-AZURE = ['windows.net', 'cloudapp.com', 'azure-api.net']
+AZURE = ['windows.net', 'cloudapp.com', 'azure-api.net', 'azurewebsites.net']
 GCP = ['appspot.com', 'firebase.com', 'ghshosted.com', 'gcr.io']
 AWS = ['amazonaws.com', 'aws.dev']
 DO = ['digitaloceanspaces.com']
