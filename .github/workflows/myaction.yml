@@ -27,10 +27,8 @@ jobs:
         python-version: 'pypy3.10'       
     - name: setup node
       uses: actions/setup-node@v6
-
     - name: Install Copilot CLI
       run: npm install -g @github/copilot
-
     - name: Run AI Inference via Copilot
       id: inference
       uses: actions/ai-inference@v1
@@ -39,6 +37,5 @@ jobs:
         model: gpt-4.1
       env:
         COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_PAT }}
-
-      - name: Print output
-        run: echo "${{ steps.inference.outputs.response }}"
+    - name: Print output
+      run: echo "${{ steps.inference.outputs.response }}"
