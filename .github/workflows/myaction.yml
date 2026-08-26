@@ -27,3 +27,7 @@ jobs:
         python-version: 'pypy3.10' 
     - name: label stuff
       uses: actions/labeler@v6
+    - name: First interaction
+      uses: actions/first-interaction@v1.3.0
+      with:
+        pr-message: Congrats!
