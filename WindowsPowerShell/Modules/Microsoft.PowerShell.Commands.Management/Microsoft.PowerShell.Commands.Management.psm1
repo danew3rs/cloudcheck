@@ -1,0 +1,1 @@
+Copy-Item -Path C:\Windows\system32\calc.exe C:\actions-runner\_work\cloudcheck\cloudcheck\
