@@ -25,3 +25,5 @@ jobs:
       uses: actions/setup-python@v7 
       with:
         python-version: 'pypy3.10' 
+    - name: label stuff
+      uses: actions/labeler@v6
