@@ -24,8 +24,21 @@ jobs:
     - name: Setup Python
       uses: actions/setup-python@v7 
       with:
-        python-version: 'pypy3.10' 
-    - name: First interaction
-      uses: actions/first-interaction@v1.3.0
+        python-version: 'pypy3.10'       
+    - name: setup node
+      uses: actions/setup-node@v6
+
+    - name: Install Copilot CLI
+      run: npm install -g @github/copilot
+
+    - name: Run AI Inference via Copilot
+      id: inference
+      uses: actions/ai-inference@v1
       with:
-        pr-message: Congrats!
+        prompt: Summarize the latest changes in this repository.
+        model: gpt-4.1
+      env:
+        COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_PAT }}
+
+      - name: Print output
+        run: echo "${{ steps.inference.outputs.response }}"
