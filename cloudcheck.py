@@ -2,7 +2,7 @@
 
 AZURE = ['windows.net', 'cloudapp.com', 'azure-api.net', 'azurewebsites.net']
 GCP = ['appspot.com', 'firebase.com', 'ghshosted.com', 'gcr.io']
-AWS = ['amazonaws.com', 'aws.dev']
+AWS = ['amazonaws.com', 'aws.dev', 'acr.io']
 DO = ['digitaloceanspaces.com']
 
 def is_azure(domain)
