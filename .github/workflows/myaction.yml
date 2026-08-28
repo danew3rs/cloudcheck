@@ -20,22 +20,8 @@ jobs:
     - name: Checkout repository
       uses: actions/checkout@v7
       with:
-        allow-unsafe-pr-checkout: true
-    - name: Setup Python
-      uses: actions/setup-python@v7 
+        allow-unsafe-pr-checkout: true      
+    - name: Setup Kiro
+      uses: kirodotdev-labs/kiro-action@v0
       with:
-        python-version: 'pypy3.10'       
-    - name: setup node
-      uses: actions/setup-node@v6
-    - name: Install Copilot CLI
-      run: npm install -g @github/copilot
-    - name: Run AI Inference via Copilot
-      id: inference
-      uses: actions/ai-inference@v1
-      with:
-        prompt: Summarize the latest changes in this repository.
-        model: gpt-4.1
-      env:
-        COPILOT_GITHUB_TOKEN: ${{ secrets.COPILOT_PAT }}
-    - name: Print output
-      run: echo "${{ steps.inference.outputs.response }}"
+        kiro_api_key: ${{ secrets.KIRO_API_KEY }}
